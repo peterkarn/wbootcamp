@@ -9,10 +9,12 @@
 </head>
 
 <body>
-  <h1>
-    Today is <%= dayForTemplate %>
-  </h1>
-  <p>You <%= shouldYouWork %> work!</p>
+  <% if (dayForTemplate === 'Saturday' || dayForTemplate === 'Sunday') { %>
+  <h1 style="color: red;">Today is <%= dayForTemplate %></h1>
+  <% } else { %>
+  <h1 style="color: green;">Today is <%= dayForTemplate %></h1>
+  <% } %>
+  <p>You <strong style="text-transform: uppercase;"><%= shouldYouWork %></strong> work!</p>
   <img src="<%= imageLink %>" alt="Image" width="300" height="200">
 </body>
 
