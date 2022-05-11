@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
+<%- include('header'); -%>
+<main>
   <% if (dayForTemplate === 'Saturday' || dayForTemplate === 'Sunday') { %>
   <h1 style="color: red;">Today is <%= dayForTemplate %></h1>
   <% } else { %>
@@ -29,7 +20,5 @@
     <input type="text" name="task" placeholder="Enter taks">
     <button type="submit" name="button" value="<%= listTitle %>">Add task</button>
   </form>
-
-</body>
-
-</html>
+</main>
+<%- include('footer'); -%>

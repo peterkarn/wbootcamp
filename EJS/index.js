@@ -64,6 +64,10 @@ app.get('/work', (req, res) => {
   res.render('index', options);
 });
 
+app.get('/about', (req, res) => {
+  res.render('about');
+})
+
 app.post('/', (req, res) => {
   if (req.body.button === 'main list') {
     todoList.push(req.body.task);
