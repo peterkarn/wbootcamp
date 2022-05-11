@@ -16,6 +16,20 @@
   <% } %>
   <p>You <strong style="text-transform: uppercase;"><%= shouldYouWork %></strong> work!</p>
   <img src="<%= imageLink %>" alt="Image" width="300" height="200">
+
+  <h2 class="title"> <%= listTitle %> </h2>
+
+  <ul>
+    <% for(let task of todoList) { %>
+    <li><%= task %></li>
+    <% } %>
+  </ul>
+
+  <form method="POST" action="/">
+    <input type="text" name="task" placeholder="Enter taks">
+    <button type="submit" name="button" value="<%= listTitle %>">Add task</button>
+  </form>
+
 </body>
 
 </html>
